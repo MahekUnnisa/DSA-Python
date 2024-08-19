@@ -7,7 +7,9 @@ class Stack:
         self.stack.append(item)
         
     def pop(self):
-        self.stack.pop()
+        if self.is_empty() == False:
+            return self.stack.pop()
+        return None
         
     def display(self):
         print(self.stack)
@@ -33,22 +35,22 @@ class Stack:
         return self.stack[0]
     
     
-def main():
-    stack = Stack()
-    stack.display()
+# def main():
+#     stack = Stack()
+#     stack.display()
     
-    print(stack.is_empty())
-    stack.push(1)
-    stack.push(2)
-    stack.push(100)
-    stack.pop()
-    stack.display()
-    stack.push(200)
-    stack.push(120)
-    stack.push(89)
-    print(stack.is_empty())
-    stack.display()
-    print(stack.peek())
-    print(stack.base())
+#     print(stack.is_empty())
+#     stack.push(1)
+#     stack.push(2)
+#     stack.push(100)
+#     stack.pop()
+#     stack.display()
+#     stack.push(200)
+#     stack.push(120)
+#     stack.push(89)
+#     print(stack.is_empty())
+#     stack.display()
+#     print(stack.peek())
+#     print(stack.base())
     
-main()
+# main()
